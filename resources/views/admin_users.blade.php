@@ -14,7 +14,7 @@
         <header>
             <div class="menu">
                 <div class="logo">
-                    <img src="{{ asset('img/icons/car-icon.png') }}" alt="Yellow car icon that is part of the logo">
+                    <!-- <img src="{{ asset('img/icons/car-icon.png') }}" alt="Yellow car icon that is part of the logo"> -->
                     <span class="blue">Polovni</span>
                     <span class="white">Automobili</span>
                 </div>
