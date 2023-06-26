@@ -58,6 +58,26 @@
                             <button class="submit-btn mr-5">Ažuriraj</button>
                         </div>
                     </form>
+                    <div class="profile-image-name">
+                        <img src="{{ auth()->user()->car_image() }}" alt="Profile image of user" class="profile-image">
+                        <h2 class="profile-name">Auto</h2>
+                    </div>
+                    <form action='/changecarimage' enctype="multipart/form-data" method="post" class="change-picture">
+                        @csrf
+                        <div class="change-picture-div">
+                            <label for="car_image" class="col-form-label">Promenite sliku svog auta:</label>
+                            <input type="file" name="car_image" id="car_image" accept="image/*" class="image-input">
+                            
+                            @error('image')
+                                <strong>{{ $message }}</strong>
+                            @enderror
+                        </div>
+                        
+                    
+                        <div class="submit-btn-div">
+                            <button class="submit-btn mr-5">Ažuriraj</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="profile-options">
                     <ul>

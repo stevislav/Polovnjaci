@@ -23,6 +23,7 @@ class Rmbr_search extends Model
         'fuel_type',
         'horse_power',
         'motor_cc',
+        'no_seats',
         'no_doors',
         'user_id',
         'imgpath',

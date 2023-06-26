@@ -50,6 +50,7 @@ class UserController extends Controller
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => ['required', 'min:6'],
             'image' => '',
+            'car_image' => ''
 
         ]);
 
@@ -120,7 +121,7 @@ class UserController extends Controller
             'password' => 'required'
 
         ]);
-        
+
         if (auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
@@ -193,6 +194,21 @@ class UserController extends Controller
         
         User::whereId(auth()->user()->id)->update([
             'image' => $img
+        ]);
+
+        return back();
+    }
+
+    public function change_car_image(Request $request) {
+        $request->validate([
+            'car_image' => 'required|image',
+        ]);
+
+        $image = $request->file('car_image');
+        $image->move(public_path().'/storage/car_images/', $img = 'img_'.Str::random(15).'.jpg');
+        
+        User::whereId(auth()->user()->id)->update([
+            'car_image' => $img
         ]);
 
         return back();

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{  asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/single-ad.css') }}">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> -->
         <title>Polovnjaci | Oglas</title>
         <!-- <link rel="icon" type="image/x-icon" href="{{ asset('img/icons/car-icon.png') }}"> -->
         <script src="{{ asset('js/index.js') }}" defer></script>
@@ -117,6 +118,10 @@
                         <li>
                             <p>Broj vrata: </p>
                             <p>{{ $listing[0]->no_doors}}</p>
+                        </li>
+                        <li>
+                            <p>Vrsta krova: </p>
+                            <p>{{ $listing[0]->roof_type}}</p>
                         </li>
                     </ul>
                 </div>

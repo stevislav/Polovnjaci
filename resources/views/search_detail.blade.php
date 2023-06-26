@@ -171,6 +171,15 @@
                                 <option value="4/5">4/5</option>
                             </select>
                         </div>
+                        <div class="ad-part">
+                            <label for="roof_type">Vrsta krova:</label>
+                            <select name="roof_type"id="roof_type">
+                                <option value="nista">nista</option>
+                                <option value="kabriolet">kabriolet</option>
+                                <option value="siber">siber</option>
+                                <option value="panorama">panorama</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="row">

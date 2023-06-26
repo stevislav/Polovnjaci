@@ -52,7 +52,11 @@ class User extends Authenticatable
     }
 
     public function profileImage() {
-        return ($this->image) ? asset('/storage/profileImages/'. $this->image) : asset('/storage/profileImages/No_image_available.png');
+        return ($this->image) ? secure_asset('/storage/profileImages/'. $this->image) : secure_asset('/storage/profileImages/No_image_available.png');
+    }
+
+    public function car_image() {
+        return ($this->car_image) ? secure_asset('/storage/car_images/'. $this->car_image) : secure_asset('/storage/profileImages/No_image_available.png');
     }
 
     public function rmbr_searches(){

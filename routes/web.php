@@ -52,3 +52,6 @@ Route::post('/rmbr_search', [Rmbr_searchController::class, 'store']);
 
 Route::get('/search_list', [Rmbr_searchController::class, 'my_searches']);
 Route::get('/delete_search/{id}', [Rmbr_searchController::class, 'destroy'])->middleware('auth');
+
+
+Route::post('/changecarimage', [UserController::class, 'change_car_image']);
